@@ -1,0 +1,357 @@
+:root {
+    --heading-color: #72DDFF;
+    --main-bg: #242424;
+  }
+  body {
+      background-color: var(--main-bg);
+  }
+
+  @font-face {
+    font-family: CocoSharp-Light;
+    src: url('../fonts/Coco-Sharp-Light-trial.ttf');
+  }
+
+  @font-face {
+    font-family: CocoSharp-Regular;
+    src: url('../fonts/Coco-Sharp-Regular-trial.ttf');
+  }
+
+  @font-face {
+    font-family: CocoSharpL-Extrabold;
+    src: url('../fonts/Coco-Sharp-Extrabold-trial.ttf');
+  }
+
+  .navbar-bgcolor {
+      background-color: black;
+  }
+
+  .navbar-toggler {
+    background-color: var(--main-bg);
+    border: 1px solid --main-bg;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 18px;
+    line-height: 23px;
+    color: #ffffff;
+    font-family: CocoSharp-Light;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--heading-color);
+}
+
+.menu-title {
+    color: var(--heading-color);
+    font-family: CocoSharp-Light;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 42px;
+}
+
+.main-menu .navbar .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* home section */
+.home-section {
+    height: 655px;
+    position: relative;
+}
+
+.home-bg {
+    background-color: #ffffff;
+    height: 655px;
+    position: relative;
+    z-index: 2;
+}
+
+.ellipse-3 {
+    width: 584px;
+    height: 584px;
+    left: 1205px;
+    top: 380px;
+    position: absolute;
+    z-index: 1;   
+}
+
+.ellipse-4 {
+    position: absolute;
+    z-index: 4;
+    width: 584px;
+    height: 584px;
+    left: 1205px;
+    top: 380px;
+}
+
+.ellipse-1 {
+    position: absolute;
+    z-index: 5;
+    width: 468px;
+    height: 468px;
+    left: 1263px;
+    top: 438px;
+}
+
+.hello-text {
+    font-family: CocoSharp-Regular;
+    font-weight: 400;
+    font-size: 52.4732px;
+    line-height: 70px;
+    padding-top: 77px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+
+.job-description-text {
+    font-family: CocoSharpL-Extrabold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 54.0881px;
+    line-height: 79px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+
+.short-description {
+    font-family: CocoSharp-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 29px;
+    padding-left: 291px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+
+.section-header-text {
+    font-family: CocoSharpL-Extrabold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 117px;
+    color: var(--heading-color);
+}
+
+.skills {
+    position: relative;
+    margin-top: 300px;
+}
+
+.expertise, .study {
+    position: absolute;
+    font-family: CocoSharpL-Extrabold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 174.372px;
+    line-height: 254px;
+    -webkit-text-stroke: 5px #323232;
+    color: transparent;    
+    right: 0;
+    top: 0;
+}
+.study {
+    top: 40%;
+    transform: rotate(-90deg);
+}
+
+.skills .skill-list {
+    color: #ffffff;
+    position: relative;
+    top: 35px;
+}
+.skill-bgcolor {
+    background-color: #383838;
+}
+
+.skill-border {
+    border: 12px solid #383838;
+}
+.skill-border:hover {
+    border: 12px solid #72DDFF;
+}
+.skill-name {
+    color: var(--heading-color);
+    font-family: CocoSharp-Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.0057px;
+    line-height: 35px;
+}
+
+.skill-description {
+    font-family: CocoSharp-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.skill-padding {
+    padding: 24px;
+}
+
+.skill-list.row .col-md-3 {
+    width: 21.5% !important;
+}
+
+.text-reset {
+    all: unset;
+    font-family: auto;
+}
+
+
+/* timeline */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3%;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: #FFFFFF;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 60%;
+    margin-left: 5%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #72DDFF;
+    border: 4px solid transparent;
+    top: 15px;
+    
+    z-index: 1;
+  }
+
+  .timeline .container:hover::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #72DDFF;
+    border: 4px solid #ffffff;
+    top: 15px;
+    
+    z-index: 1;
+  }
+  
+  /* Place the container to the right */
+  /* .right {
+    left: 50%;
+  } */
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  /* .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+   */
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding-left: 30px;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .content .course-name, .content .board-name {
+    font-family: CocoSharp-Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.0057px;
+    line-height: 35px;
+    color: var(--heading-color);
+  }
+
+  .content .board-name {
+      color: #ffffff;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+}
