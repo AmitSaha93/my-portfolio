@@ -7,47 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Amit' Portfolio</title>
+    <title>Amit's Portfolio</title>
 </head>
 
 <body>
 
     <section class="main-menu">
-        <nav class="navbar navbar-expand-md navbar-bgcolor">
+        <nav class="navbar navbar-expand-md navbar-bgcolor fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="assets/images/logo-1x.png" alt="">
-                    <span class="menu-title p-2">Amit's Portfolio</span>
+                <a class="navbar-brand w-50" href="#">
+                    <img src="assets/images/NIAB0816.JPEG" class="img-fluid rounded-circle" alt="img" width="5%"
+                        height="5%">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#"
+                                onclick="getfocus('home')">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="getfocus()">Portfolio</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="getfocus('expertise')">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
+                            <a class="nav-link" href="#" onclick="getfocus('experience')">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Educations</a>
+                            <a class="nav-link" href="#"
+                                onclick="getfocus('education')">Educations</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Me</a>
+                            <a class="nav-link" href="#" onclick="getfocus('me')">About Me</a>
                         </li>
                     </ul>
                 </div>
@@ -56,29 +58,30 @@
     </section>
 
     <section class="home-section">
-        <div class="home-bg">
+        <div class="home-bg" id="home">
             <p class="container hello-text">Hello, I’m a</p>
-            <p class="container job-description-text pb-4">Frontend Developer & Web Developer</p>
-            <p class="col-7 short-description">I am a frontend developer and i have 5 years of experince bla bla bla. I
-                am a frontend developer and i have 5 years of experince bla bla bla. I am a frontend developer and i
-                have 5 years of experince bla bla bla. I am a frontend developer and i have 5 years of experince bla bla
-                bla. I am a frontend developer and i have 5 years of experince bla bla bla. I am a frontend developer
-                and i have 5 years of experince bla bla bla. I am a frontend developer and i have 5 years of experince
-                bla bla bla.</p>
+            <p class="container job-description-text pb-4">Full stack developer</p>
+            <p class="container p-0 mb-0">Innovative and results-driven professional expert in crafting seamless user
+                interfaces, optimizing application performance, and integrating robust back-end technologies. Proficient
+                in deployment, ensuring responsive designs and scalable solutions. Recipient of multiple accolades for
+                technical excellence and leadership, including 'On The Spot' awards for implementing reusable components
+                and delivering zero-defect software solutions. Demonstrated success in developing high-performance,
+                user-centric web applications using Angular, Vue.js, and Node.js. Skilled in crafting scalable front-end
+                architectures, enhancing application efficiency by up to 60%, and reducing development time by 80%.</p>
         </div>
-        <div class="ellipse-3">
+        <div class="ellipse-3 d-none d-xl-block">
             <img class="img-fluid" src="assets/images/Ellipse 3.png" alt="">
         </div>
-        <div class="ellipse-4">
+        <div class="ellipse-4 d-none d-xl-block">
             <img class="img-fluid" src="assets/images/Ellipse 4.png" alt="">
         </div>
-        <div class="ellipse-1">
-            <img class="img-fluid" src="assets/images/Ellipse 1.png" alt="">
+        <div class="ellipse-1 d-none d-xl-block">
+            <img src="assets/images/NIAB0816.JPEG" class="rounded-circle" alt="img" width="100%" height="100%">
         </div>
     </section>
 
     <section class="skills container">
-        <div class="row">
+        <div class="row"  id="expertise">
             <div class="col section-header-text">Skill Set</div>
         </div>
         <div class="expertise">EXPERTISE</div>
@@ -122,6 +125,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="skill-list row">
             <div class="col-md-3 feature-item p-0 m-3 skill-border">
                 <div class="skill-bgcolor skill-padding h-100">
                     <div class="hover-border">
@@ -136,8 +141,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="skill-list row">
             <div class="col-md-3 feature-item p-0 m-3 skill-border">
                 <div class="skill-bgcolor skill-padding h-100">
                     <div class="hover-border">
@@ -158,7 +161,6 @@
                             <br>
                             <br>
                             <br>
-                            <br>
                         </p>
                     </div>
                 </div>
@@ -166,8 +168,112 @@
         </div>
     </section>
 
+
     <section class="skills container">
-        <div class="row">
+        <div class="row" id="experience">
+            <div class="col section-header-text">Experience</div>
+        </div>
+        <div class="study">WORKS</div>
+        <div class="timeline">
+
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">Aegon, UK</h2>
+                    <h2 class="board-name">Full stack developer</h2>
+                    <p class="skill-description pt-4 pb-4">
+                        Cross-regional collaboration, travelling from India to the UK to work directly with clients,
+                        strengthening client relationships and project alignment.
+                        <br />Delivered high-quality coding tasks while mentoring junior developers, elevating team
+                        skills and project success.
+                        <br />Recognized by clients and senior management for outstanding project contributions,
+                        reflecting high standards of work and dedication.
+                        <br />Enhanced user engagement by developing and maintaining web applications utilizing Angular
+                        and Node.js, adhering to micro front-end architecture principles.
+                        <br />Contributed to talent acquisition, actively participating in the recruitment process to
+                        build a robust project team.
+                        <br />Fostered team development by mentoring junior developers enhancing team skills and project
+                        outcomes.
+                        <br />Facilitated successful project deliveries by collaborating closely with other developers,
+                        designers, and stakeholders within agile frameworks like Scrum and Kanban.
+                        <br />Continuously optimized software processes to enhance performance, security, and
+                        maintainability, demonstrating a commitment to excellence in software engineering.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">Bajaj Allianz General Insurance Company, India</h2>
+                    <h2 class="board-name">Front-end Developer</h2>
+                    <p class="skill-description pt-4 pb-4">
+                        Transformed wireframes and design concepts into high-quality code using HTML, CSS, and
+                        JavaScript, effectively bridging design and development.
+                        <br />>Enhanced mobile app interactivity and aesthetics by customizing CSS and JavaScript
+                        animations and transitions, resulting in increased usability.
+                        <br />>Updated static web pages to ensure accuracy and relevance, preserving the integrity and
+                        utility of content.
+                        <br />>Developed a robust, scalable, and easily manageable style sheet that complies with coding
+                        standards, streamlining future enhancements and maintenance.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">New India Assurance, India</h2>
+                    <h2 class="board-name">Front-end Developer</h2>
+                    <p class="skill-description pt-4 pb-4">
+                        Optimized Angular-based applications using the Ionic framework to create visually appealing and
+                        user-friendly layouts, enhancing mobile and web app aesthetics and functionality.
+                        <br />Transformed wireframes and design concepts into high-quality code using HTML, CSS, and
+                        JavaScript, effectively bridging design and development.
+                        <br />Enhanced mobile app interactivity and aesthetics by customizing CSS and JavaScript
+                        animations and transitions, resulting in increased usability.
+                        <br />Updated static web pages to ensure accuracy and relevance, preserving the integrity and
+                        utility of content.
+                        <br />Developed a robust, scalable, and easily manageable style sheet that complies with coding
+                        standards, streamlining future enhancements and maintenance.
+
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">TCS BaNCS | Kolkata, India</h2>
+                    <h2 class="board-name">HTML-CSS</h2>
+                    <p class="skill-description pt-4 pb-4">
+                        Revitalized the BaNCS back-office application, introducing an innovative look and enhanced
+                        functionality with strategic HTML and CSS modifications, significantly improving the user
+                        interface.
+                        <br />Engineered fully responsive design, employing advanced media queries to ensure a seamless
+                        user experience on all devices.
+                        <br />Elevated client satisfaction by 25%, leading a pivotal overhaul of the core banking
+                        software suite tailored for retail banks, which enhanced operational efficiency and customer
+                        interaction.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">Tata Steel Europe (UK and NL)</h2>
+                    <h2 class="board-name">Mainframe developer</h2>
+                    <p class="skill-description pt-4 pb-4">
+                        Revitalized the BaNCS back-office application, introducing an innovative look and enhanced
+                        functionality with strategic HTML and CSS modifications, significantly improving the user
+                        interface.
+                        <br />Engineered fully responsive design, employing advanced media queries to ensure a seamless
+                        user experience on all devices.
+                        <br />Elevated client satisfaction by 25%, leading a pivotal overhaul of the core banking
+                        software suite tailored for retail banks, which enhanced operational efficiency and customer
+                        interaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills container">
+        <div class="row"  id="education">
             <div class="col section-header-text">Education</div>
         </div>
         <div class="study">STUDY</div>
@@ -175,7 +281,16 @@
 
             <div class="container right">
                 <div class="content">
-                    <h2 class="course-name">Bachelor's Degree ( <span class="text-reset">2012 - 2015</span>)</h2>
+                    <h2 class="course-name">Master's Degree ( <span class="text-reset">2019 - 2022</span> )</h2>
+                    <h2 class="board-name">SASTRA University</h2>
+                    <p class="skill-description pt-4 pb-4">Completed Masters in Computer Application with <span
+                            class="text-reset">7</span> CGPA.</p>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <h2 class="course-name">Bachelor's Degree ( <span class="text-reset">2012 - 2015</span> )</h2>
                     <h2 class="board-name">NIMAS College</h2>
                     <p class="skill-description pt-4 pb-4">Completed Bachelor in Computer Application with <span
                             class="text-reset">8</span> CGPA.</p>
@@ -183,7 +298,7 @@
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2 class="course-name">Higher Secondary ( <span class="text-reset">2009 - 2011</span>)</h2>
+                    <h2 class="course-name">Higher Secondary ( <span class="text-reset">2009 - 2011</span> )</h2>
                     <h2 class="board-name">Purba Barasat Adarsha Vidyapith</h2>
                     <p class="skill-description pt-4 pb-4">The High School was mainly focus on the bases of science
                         with computer application. Completed my high school with
@@ -193,9 +308,10 @@
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2 class="course-name">Sedcondary School ( <span class="text-reset">2007 - 2009</span>)</h2>
+                    <h2 class="course-name">Sedcondary School ( <span class="text-reset">2007 - 2009</span> )</h2>
                     <h2 class="board-name">Purba Barasat Adarsha Vidyapith</h2>
-                    <p class="skill-description pt-4 pb-4">The Secondary aims at Maths , English , Science, Social Science, Litrature and Languages.
+                    <p class="skill-description pt-4 pb-4">The Secondary aims at Maths , English , Science, Social
+                        Science, Litrature and Languages.
                         completed my Secondary school with <span class="text-reset">75%</span>.
                     </p>
                 </div>
@@ -204,10 +320,81 @@
 
     </section>
 
+    <section class="skills container">
+        <div class="row" id="achivements">
+            <div class="col section-header-text">Achivements</div>
+        </div>
+        <div class="expertise">AWARDS</div>
+        <div class="skill-list row">
+            <div class="col-md-3 feature-item p-0 m-3 skill-border">
+                <div class="skill-bgcolor skill-padding h-100">
+                    <div class="hover-border">
+                        <span><img class="img-fluid" src="assets/images/trophy.png" alt="trophy1" width="50%"
+                                height="50%"></span>
+                        <p class="skill-description mb-0 pt-2">‘On The Spot’ award for implementing reusable components.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 feature-item p-0 m-3 skill-border">
+                <div class="skill-bgcolor skill-padding h-100">
+                    <div class="hover-border">
+                        <span><img class="img-fluid" src="assets/images/trophy.png" alt="trophy2" width="50%"
+                                height="50%"></span>
+                        <p class="skill-description mb-0 pt-2">‘Best Team award’ with the team.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 feature-item p-0 m-3 skill-border">
+                <div class="skill-bgcolor skill-padding h-100">
+                    <div class="hover-border">
+                        <span><img class="img-fluid" src="assets/images/trophy.png" alt="trophy3" width="50%"
+                                height="50%"></span>
+                        <p class="skill-description mb-0 pt-2">‘On The Spot’ award for developing a claim process code
+                            refactor and zero-defect delivery.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 feature-item p-0 m-3 skill-border">
+                <div class="skill-bgcolor skill-padding h-100">
+                    <div class="hover-border">
+                        <span><img class="img-fluid" src="assets/images/trophy.png" alt="trophy3" width="50%"
+                                height="50%"></span>
+                        <p class="skill-description mb-0 pt-2">‘Star team award’ || ‘Best team award’</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+        <script>
+            function getfocus(id) {
+                window.scroll(0, findPosition(document.getElementById(id)));
+            }
+            function findPosition(obj) {
+                let currenttop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        currenttop += obj.offsetTop;
+                    } while ((obj = obj.offsetParent));
+                    return [currenttop];
+                }
+            }
+        </script>
 </body>
 
 </html>
